@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED47F206-45C7-46EE-B6E5-67C8389216E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FaceRecognition</RootNamespace>
+    <AssemblyName>FaceRecognition</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV">
+      <HintPath>opencv\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>opencv\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util">
+      <HintPath>opencv\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="InTheHand.Net.Personal, Version=3.5.605.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\InTheHand.Net.Personal.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArduinoControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArduinoControl.Designer.cs">
+      <DependentUpon>ArduinoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BazaDeDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BazaDeDate.Designer.cs">
+      <DependentUpon>BazaDeDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BluetoothForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BluetoothForm.Designer.cs">
+      <DependentUpon>BluetoothForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomBluetoothService.cs" />
+    <Compile Include="DetectareFataDinFotografie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetectareFataDinFotografie.Designer.cs">
+      <DependentUpon>DetectareFataDinFotografie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EigenFaceRecognizerEngine.cs" />
+    <Compile Include="Excel.cs" />
+    <Compile Include="MailConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailConfiguration.Designer.cs">
+      <DependentUpon>MailConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetEmail.cs" />
+    <Compile Include="TotalNrPersonsInDataBase.cs" />
+    <Compile Include="TrainingModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainingModule.Designer.cs">
+      <DependentUpon>TrainingModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recognizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recognizer.Designer.cs">
+      <DependentUpon>Recognizer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartScreen.Designer.cs">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TresholdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TresholdForm.Designer.cs">
+      <DependentUpon>TresholdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TresholdValue.cs" />
+    <Compile Include="TrimiteMail.cs" />
+    <EmbeddedResource Include="ArduinoControl.resx">
+      <DependentUpon>ArduinoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BazaDeDate.resx">
+      <DependentUpon>BazaDeDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BluetoothForm.resx">
+      <DependentUpon>BluetoothForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetectareFataDinFotografie.resx">
+      <DependentUpon>DetectareFataDinFotografie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailConfiguration.resx">
+      <DependentUpon>MailConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainingModule.resx">
+      <DependentUpon>TrainingModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Recognizer.resx">
+      <DependentUpon>Recognizer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartScreen.resx">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TresholdForm.resx">
+      <DependentUpon>TresholdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Backgrounds\1.jpg" />
+    <Content Include="Backgrounds\11.jpg" />
+    <Content Include="Backgrounds\12.jpg" />
+    <Content Include="Backgrounds\13.jpg" />
+    <Content Include="Backgrounds\14.jpg" />
+    <Content Include="Backgrounds\15.jpg" />
+    <Content Include="Backgrounds\16.jpg" />
+    <Content Include="Backgrounds\2.jpg" />
+    <Content Include="Backgrounds\3.jpg" />
+    <Content Include="Backgrounds\4.jpg" />
+    <Content Include="Backgrounds\5.jpg" />
+    <Content Include="Backgrounds\6.jpg" />
+    <Content Include="Backgrounds\boton-rectangular-png-1.jpg" />
+    <Content Include="Backgrounds\boton-rectangular-png-6.png" />
+    <Content Include="Backgrounds\MAIN1.jpg" />
+    <Content Include="Backgrounds\MAIN12.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
